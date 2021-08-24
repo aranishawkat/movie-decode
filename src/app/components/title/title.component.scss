@@ -1,7 +1,10 @@
 .title {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding-top: 30px;
+  margin-right: 2rem;
+  margin-left: 2rem;
 
     .icon {
       font-size: 70px;
@@ -10,6 +13,7 @@
 
     .header{
       font-size: 50px;
+      text-align: center;
       margin: 0;
     }
 }
