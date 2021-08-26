@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-item.component.scss']
 })
 export class MovieItemComponent implements OnInit {
-  starValue : number = 3;
+  starValue : number = 4;
+  userValue : number = 3;
 
   constructor() { }
 

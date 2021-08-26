@@ -3,7 +3,6 @@
     <img src="../../../assets/movie_cars.jpeg" />
   </div>
 
-  <p-card>
   <div class="content">
     <div class="title--wrapper">
       <span class="title">Cars</span>
@@ -12,12 +11,9 @@
 
     <div class="description">
       <p>
-        Lightning McQueen, a racing car, 
-        learns a hard lesson in life when 
-        he damages a lot of property in 
-        Radiator Springs. His task is to repair 
-        the damage done before he can get back 
-        on the road.
+        Lightning McQueen, a racing car, learns a hard lesson in life when 
+        he damages a lot of property in Radiator Springs. His task is to repair 
+        the damage done before he can get back on the road.
       </p>
     </div>
 
@@ -31,10 +27,66 @@
       ></p-rating>
     </div>
 
-    <div>
-      <h2>Reviews</h2>
+    <div class="review--wrapper">
+      <h2>Review</h2>
+      <div>
+
+        <p-divider></p-divider>
+        <div class="review">
+          <div class="userName"><h4>User A</h4></div>
+          <div class="userRating">
+            <p-rating [ngModel]="userValue" 
+          [readonly]="true" 
+          [stars]="5" 
+          [cancel]="false" 
+          iconOnClass="star-active pi pi-star"
+          ></p-rating>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <p-divider></p-divider>
+        <div class="review">
+          <div class="userName"><h4>User B</h4></div>
+          <div class="userRating">
+            <p-rating [ngModel]="userValue" 
+          [readonly]="true" 
+          [stars]="5" 
+          [cancel]="false" 
+          iconOnClass="star-active pi pi-star"
+          ></p-rating>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <p-divider></p-divider>
+        <div class="review">
+          <div class="userName"><h4>User C</h4></div>
+          <div class="userRating">
+            <p-rating [ngModel]="userValue" 
+          [readonly]="true" 
+          [stars]="5" 
+          [cancel]="false" 
+          iconOnClass="star-active pi pi-star"
+          ></p-rating>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+      </div>
     </div>
   </div>
-</p-card>  
 
 </div>

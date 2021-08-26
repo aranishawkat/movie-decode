@@ -8,7 +8,8 @@ import { TitleComponent } from './components/title/title.component';
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import {RatingModule} from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
-import {CardModule} from 'primeng/card';
+import {DividerModule} from 'primeng/divider';
+import {SplitterModule} from 'primeng/splitter';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {CardModule} from 'primeng/card';
     AppRoutingModule,
     RatingModule,
     FormsModule,
-    CardModule
+    DividerModule,
+    SplitterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

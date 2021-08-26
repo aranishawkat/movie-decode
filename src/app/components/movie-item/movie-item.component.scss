@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 40px;
-  // border: 2px solid #0066cc;
   margin-right: 180px;
   margin-left: 180px;
   justify-content: space-between;
@@ -13,7 +12,7 @@
     max-width: 400px;
 
     img {
-      height: auto;
+      max-height: 600px;
       width: 100%;
     }
   }
@@ -42,6 +41,20 @@
 
     .rating{
       margin-top: 50px;
+    }
+
+    .review--wrapper{
+      margin-top: 50px;
+    }
+
+    .review{
+      column-count: 2;
+      column-span: all;
+      column-gap: 80px;
+    }
+
+    .userName{
+      margin-top: -20px;
     }
 
     display: block;
