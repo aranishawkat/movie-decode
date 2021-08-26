@@ -5,7 +5,7 @@
   .review{
     column-count: 2;
     column-span: all;
-    column-gap: 200px;
+    column-gap: 450px;
   }
 
   .reviewHeader{
@@ -13,9 +13,9 @@
   }
 
   .userReview{
-    column-count: 2;
+    column-count: 3;
     column-span: all;
-    column-gap: 150px;
+    column-gap: 95px;
   }
 
   .userComment{
@@ -24,4 +24,20 @@
 
   .userName{
     margin-top: -20px;
+  }
+
+//   .userRating{
+//     margin-top: -20px;
+//   }
+
+  .edit-delete-button{
+      margin-top: 0px;
+  }
+
+  .edit-button{
+    margin-right: 16px;
+  }
+
+  .userComment{
+      margin-top: 10px;
   }
