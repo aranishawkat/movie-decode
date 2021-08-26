@@ -8,6 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class MovieItemComponent implements OnInit {
   starValue : number = 4;
   userValue : number = 3;
+  val1: number | undefined;
+
+  // Add review
+  displayBasic: boolean = false;
+
+  showBasicDialog() {
+    this.displayBasic = true;
+}
+
+  //Review Username
+    userNameReview: any; 
+    userComment: any;
+
 
   constructor() { }
 

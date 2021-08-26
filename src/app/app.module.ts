@@ -9,7 +9,11 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
 import {RatingModule} from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import {DividerModule} from 'primeng/divider';
-import {SplitterModule} from 'primeng/splitter';
+import {DialogModule} from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InputTextareaModule } from "primeng/inputtextarea";
+import { InputTextModule } from "primeng/inputtext";
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import {SplitterModule} from 'primeng/splitter';
     RatingModule,
     FormsModule,
     DividerModule,
-    SplitterModule
+    DialogModule,
+    ButtonModule,
+    BrowserAnimationsModule,
+    InputTextModule,
+    InputTextareaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
