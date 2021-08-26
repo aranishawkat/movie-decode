@@ -14,13 +14,15 @@ import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { InputTextModule } from "primeng/inputtext";
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TitleComponent,
-    MovieItemComponent
+    MovieItemComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
