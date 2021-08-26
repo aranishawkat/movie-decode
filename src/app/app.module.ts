@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { TitleComponent } from './components/title/title.component';
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
+import {RatingModule} from 'primeng/rating';
+import { FormsModule } from '@angular/forms';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RatingModule,
+    FormsModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

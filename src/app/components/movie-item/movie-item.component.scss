@@ -1,10 +1,10 @@
 .movie-item--wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
-  border: 2px solid #0066cc;
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-top: 40px;
+  // border: 2px solid #0066cc;
+  margin-right: 180px;
+  margin-left: 180px;
   justify-content: space-between;
 
 
@@ -19,21 +19,29 @@
   }
 
   .content {
-    margin-right: 200px;
     max-width: 500px;
+    display: flex;
+
+    .title--wrapper{
+      display: flex;
+      justify-content: center;
+    }
 
     .title {
       font-size: 50px;
       margin-right: 20px;
+      text-align: center;
     }
 
     .year{
+      margin-top: 28px;
       font-size: 20px;
       color: rgb(48, 48, 48);
+      text-align: center;
     }
 
-    .description{
-
+    .rating{
+      margin-top: 50px;
     }
 
     display: block;

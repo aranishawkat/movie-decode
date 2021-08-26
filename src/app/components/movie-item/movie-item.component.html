@@ -3,10 +3,11 @@
     <img src="../../../assets/movie_cars.jpeg" />
   </div>
 
+  <p-card>
   <div class="content">
-    <div>
+    <div class="title--wrapper">
       <span class="title">Cars</span>
-      <span class="year">2006</span>
+      <span class="year">(2006)</span>
     </div>
 
     <div class="description">
@@ -20,5 +21,20 @@
       </p>
     </div>
 
+    <div class="rating">
+      <h2>Rating</h2> 
+      <p-rating [ngModel]="starValue" 
+      [readonly]="true" 
+      [stars]="5" 
+      [cancel]="false" 
+      iconOnClass="star-active pi pi-star"
+      ></p-rating>
+    </div>
+
+    <div>
+      <h2>Reviews</h2>
+    </div>
   </div>
+</p-card>  
+
 </div>
