@@ -1,0 +1,9 @@
+<p-card header="User Reviews">
+  <div *ngFor="let review of reviews">
+    <p-panel>
+      <ng-template pTemplate="header"> <h3>{{review.name}}</h3> </ng-template>
+      <p-rating [ngModel]="review.rating" [cancel]="false"></p-rating>
+      <ng-template pTemplate="footer">{{ review.review }} </ng-template>
+    </p-panel>
+  </div>
+</p-card>
