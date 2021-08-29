@@ -53,3 +53,4 @@ baseline.json
 # Husky
 .husky/_
 
+config.bat
