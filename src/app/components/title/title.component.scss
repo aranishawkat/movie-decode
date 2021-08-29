@@ -2,21 +2,51 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 10px;
   margin-right: 2rem;
   margin-left: 2rem;
 
-    .logo {
-      max-width: 100px;
-      max-height: 100px;
-      margin-top: -15px;
+  h1 {
+    margin: 0;
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Oswald", Helvetica, sans-serif;
+    font-size: 60px;
+    transform: skewY(-2deg);
+    letter-spacing: 4px;
+    word-spacing: -8px;
+    color: tomato;
+    text-shadow: -1px -1px 0 firebrick, -2px -2px 0 firebrick,
+      -3px -3px 0 firebrick, -4px -4px 0 firebrick, -5px -5px 0 firebrick,
+      -6px -6px 0 firebrick, -7px -7px 0 firebrick, -8px -8px 0 firebrick,
+      -30px 20px 40px rgb(255, 255, 255);
+  }
+
+  .logo {
+    height: 200px;
+  }
+
+  .icon {
+    font-size: 70px;
+    margin-right: 20px;
+  }
+
+  .header {
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    h1 {
+      margin-top: 15px;
+      font-size: 40px;
     }
 
-    .header{
-      font-size: 50px;
-      text-align: center;
-      margin: 0;
-      animation: glow 1s ease-in-out infinite alternate;
-      font-family: Luminari, fantasy;
+    .logo {
+      height: 120px;
     }
+  }
 }
