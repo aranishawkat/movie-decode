@@ -4,10 +4,13 @@
 This repository contains the Angular implementation of a movie review app called `Movie Decoder`. This app uses `Bootstrap` and `PrimeNG` for creating responsive UI and other functionalities. The app features include -
 
 - Movie list view (Table & Card)
+- Sort movie list by movie names
+- Search movie by name keywords
 - Movie item view
 - CRUD operation on Movie items
 - Review list view
 - Add review for specific movies
+- Add stars to reviews
 - Form validations
 - UI Notifications on CRUD operation
 
