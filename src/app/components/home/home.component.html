@@ -1,4 +1,51 @@
 <section class="home">
+  <p-toast></p-toast>
+
+  <div class="title--wrapper">
     <app-title></app-title>
-    <app-movie-item></app-movie-item>
+  </div>
+
+  <div *ngIf="showMovieList" class="item--wrapper">
+    <app-movie-list
+      [movies]="movies"
+      (addToggle)="onAddToggle()"
+      (viewItem)="onViewItem($event)"
+      (deleteItem)="onDeleteItem($event)"
+    ></app-movie-list>
+  </div>
+
+  <div *ngIf="showAddMovie" class="item--wrapper">
+    <app-add-movie
+      *ngIf="selectedMovie === null"
+      (addMovie)="onAddMovie($event)"
+      (discard)="onDiscardMovie()"
+    ></app-add-movie>
+
+    <app-add-movie
+      *ngIf="selectedMovie !== null"
+      headerText="Edit Movie"
+      [movie]="selectedMovie"
+      (addMovie)="onEditMovie($event)"
+      (discard)="onEditDiscardMovie()"
+    ></app-add-movie>
+  </div>
+
+  <div *ngIf="showMovieItem" class="item--wrapper">
+    <app-movie-item
+      [movie]="selectedMovie"
+      (goBack)="onGoBack()"
+      (editToggle)="onEditToggle()"
+    ></app-movie-item>
+  </div>
+
+  <div *ngIf="showAddReview" class="item--wrapper">
+    <app-add-movie-review
+      (addReview)="onAddReview($event)"
+      (discard)="onDiscardReview()"
+    ></app-add-movie-review>
+  </div>
+
+  <div *ngIf="showMovieItem" class="item--wrapper">
+    <app-review-list [reviews]="selectedMovie.reviews"></app-review-list>
+  </div>
 </section>
