@@ -1,0 +1,48 @@
+:host ::ng-deep {
+  .p-card {
+    box-shadow: none;
+  }
+
+  .p-card-body {
+    padding: 2rem;
+  }
+
+  .form--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .text-area {
+      margin-top: 20px;
+      width: stretch;
+    }
+
+    .text-area-large {
+      height: 150px;
+    }
+
+    .input-area {
+      margin-top: 20px;
+    }
+
+    .input-wrap {
+      display: flex;
+      justify-content: space-between;
+      width: stretch;
+      padding-left: 2px;
+
+      .buttons {
+        position: relative;
+        width: 80px;
+        display: flex;
+        justify-content: space-between;
+        bottom: 10px;
+      }
+
+      .text-fields {
+          display: flex;
+          flex-direction: column;
+      }
+    }
+  }
+}

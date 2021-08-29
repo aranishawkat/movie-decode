@@ -1,0 +1,42 @@
+<p-card header="Add Review">
+  <p-confirmPopup></p-confirmPopup>
+  <div class="form--wrapper">
+    <div class="input-wrap">
+      <p-rating [(ngModel)]="rating" [cancel]="false"></p-rating>
+      <div class="buttons">
+        <button
+          pButton
+          pRipple
+          type="button"
+          icon="pi pi-check"
+          class="p-button-rounded p-button-outlined"
+          (click)="onAddReview()"
+        ></button>
+        <button
+          pButton
+          pRipple
+          type="button"
+          icon="pi pi-times"
+          class="p-button-rounded p-button-danger p-button-outlined"
+          (click)="onDiscard($event)"
+        ></button>
+      </div>
+    </div>
+    <div class="text-fields">
+      <div class="input-area">
+        <input
+          [(ngModel)]="name"
+          type="text"
+          pInputText
+          placeholder="Your Name"
+        />
+      </div>
+      <textarea
+        [(ngModel)]="review"
+        class="text-area text-area-large"
+        pInputTextarea
+        placeholder="Your Review"
+      ></textarea>
+    </div>
+  </div>
+</p-card>
