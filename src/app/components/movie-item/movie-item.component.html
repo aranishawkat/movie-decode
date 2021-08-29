@@ -1,36 +1,47 @@
-<div class="movie-item--wrapper">
-  <div class="poster">
-    <img src="../../../assets/movie_cars.jpeg" />
-  </div>
-
-  <div class="content">
-    <div class="title--wrapper">
-      <span class="title">Cars</span>
-      <span class="year">(2006)</span>
+<section>
+  <p-card header="Movie Details">
+    <div class="button-back">
+      <button
+        pButton
+        pRipple
+        type="button"
+        icon="pi pi-arrow-left"
+        class="p-button-rounded p-button-outlined"
+        (click)="onGoBack()"
+      ></button>
     </div>
+    <div class="card-wrapper">
+      <div class="movie-image">
+        <img [src]="movie.poster" />
+      </div>
 
-    <div class="description">
-      <p>
-        Lightning McQueen, a racing car, learns a hard lesson in life when 
-        he damages a lot of property in Radiator Springs. His task is to repair 
-        the damage done before he can get back on the road.
-      </p>
+      <div class="movie-desc">
+        <h1>{{ movie.name }}</h1>
+        <h3>Release Year: {{ movie.year }}</h3>
+        <div class="rating">
+          <p-rating
+            [ngModel]="movie.rating"
+            [readonly]="true"
+            [cancel]="false"
+          ></p-rating>
+        </div>
+        <div class="category">
+          <i class="pi pi-tag icon"></i
+          ><span class="category-genre">{{ movie.genre }}</span>
+        </div>
+        <p class="desc">
+          {{ movie.longDescription }}
+        </p>
+        <button
+          pButton
+          pRipple
+          label="Edit Movie"
+          type="button"
+          icon="pi pi-pencil"
+          class="p-button-rounded p-button-outlined"
+          (click)="onEdit()"
+        ></button>
+      </div>
     </div>
-
-    <div class="rating">
-      <h2>Rating</h2> 
-      <p-rating [ngModel]="starValue" 
-      [readonly]="true" 
-      [stars]="5" 
-      [cancel]="false" 
-      iconOnClass="star-active pi pi-star"
-      ></p-rating>
-    </div> 
-
-  </div>
-</div>
-
-<div class="review--wrapper">
-  <app-reviews></app-reviews>
-</div>
-
+  </p-card>
+</section>

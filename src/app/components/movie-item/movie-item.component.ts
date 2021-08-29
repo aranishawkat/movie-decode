@@ -1,17 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'app-movie-item',
-  templateUrl: './movie-item.component.html',
-  styleUrls: ['./movie-item.component.scss']
+  selector: "app-movie-item",
+  templateUrl: "./movie-item.component.html",
+  styleUrls: ["./movie-item.component.scss"],
 })
 export class MovieItemComponent implements OnInit {
-  starValue : number = 4;
+  @Input() movie: any = {};
 
-  constructor() { }
+  @Output() goBack = new EventEmitter();
+  @Output() editToggle = new EventEmitter();
 
-  ngOnInit(): void {
+  constructor() {}
 
+  ngOnInit(): void {}
+
+  onGoBack() {
+    this.goBack.emit();
   }
-
+  onEdit() {
+    this.editToggle.emit();
+  }
 }
