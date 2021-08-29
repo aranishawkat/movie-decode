@@ -1,0 +1,67 @@
+<section>
+  <p-confirmPopup></p-confirmPopup>
+  <p-card [header]="headerText">
+    <div class="form--wrapper">
+      <div class="input-wrap">
+        <p-rating [(ngModel)]="rating" [cancel]="false"></p-rating>
+        <div class="buttons">
+          <button
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-check"
+            class="p-button-rounded p-button-outlined"
+            (click)="onAddMovie()"
+          ></button>
+          <button
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-times"
+            class="p-button-rounded p-button-danger p-button-outlined"
+            (click)="onDiscard($event)"
+          ></button>
+        </div>
+      </div>
+      <div class="text-fields">
+        <div class="input-area">
+          <input [(ngModel)]="name" type="text" pInputText placeholder="Name" />
+        </div>
+        <div class="input-area">
+          <input
+            [(ngModel)]="genre"
+            type="text"
+            pInputText
+            placeholder="Genre"
+          />
+        </div>
+        <div class="input-area">
+          <input
+            [(ngModel)]="year"
+            type="text"
+            pInputText
+            placeholder="Release Year"
+          />
+        </div>
+        <textarea
+          [(ngModel)]="poster"
+          class="text-area"
+          pInputTextarea
+          placeholder="Poster Link"
+        ></textarea>
+        <textarea
+          [(ngModel)]="shortDescription"
+          class="text-area text-area-large"
+          pInputTextarea
+          placeholder="Short Description"
+        ></textarea>
+        <textarea
+          [(ngModel)]="longDescription"
+          class="text-area text-area-large"
+          pInputTextarea
+          placeholder="Long Description"
+        ></textarea>
+      </div>
+    </div>
+  </p-card>
+</section>
