@@ -1,0 +1,243 @@
+:host ::ng-deep {
+  .grid {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .p-dropdown {
+    width: 14rem;
+    font-weight: normal;
+  }
+
+  .movie-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+
+    img {
+      width: 200px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      margin-right: 2rem;
+    }
+
+    .movie-list-detail {
+      display: flex;
+    }
+
+    .movie-list-infos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 500px;
+
+      .name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .description {
+        margin: 0 0 1rem 0;
+      }
+
+      .category {
+        display: flex;
+
+        .category-genre {
+          font-weight: 600;
+          vertical-align: middle;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .p-rating {
+      margin-bottom: 10px;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .button {
+        margin-bottom: 10px;
+      }
+
+      .p-button-label {
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  .movie-grid-item {
+    margin: 0.5em;
+    border: 1px solid #dee2e6;
+
+    .movie-image {
+      display: flex;
+      justify-content: center;
+
+      max-width: 400px;
+      max-height: 600px;
+    }
+
+    .movie-grid-item-top,
+    .movie-grid-item-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    img {
+      width: 55%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      margin: 2rem 0;
+    }
+
+    .movie-grid-item-content {
+      text-align: center;
+      max-width: 400px;
+      padding-right: 10px;
+      padding-left: 10px;
+
+      .name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .rating {
+        margin-bottom: 10px;
+      }
+
+      .icon {
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+
+      .category {
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: center;
+      }
+
+      .category-genre {
+        font-weight: 600;
+        vertical-align: middle;
+        margin-bottom: 10px;
+      }
+
+      .description {
+        margin-bottom: 10px;
+      }
+
+      .actions {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+
+        .button {
+          margin-right: 10px;
+        }
+
+        .p-button-label {
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
+
+    .movie-price {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  :host ::ng-deep {
+    .movie-list-item {
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 150px;
+        margin: 2rem 0;
+        margin-right: 2rem;
+      }
+
+      .movie-list-detail {
+        text-align: center;
+      }
+
+      .movie-list-infos {
+        .category {
+          display: none;
+        }
+      }
+
+      .movie-price {
+        align-self: center;
+      }
+
+      .actions {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 180px;
+
+        .button {
+          margin-bottom: 0;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .header-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .dropdown,
+      .search,
+      .options {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :host ::ng-deep {
+    .movie-list-item {
+      .actions {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 365px) {
+  :host ::ng-deep {
+    .movie-list-item {
+      .movie-list-detail {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img {
+        margin-right: 0;
+      }
+    }
+  }
+}

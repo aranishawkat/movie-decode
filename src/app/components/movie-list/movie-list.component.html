@@ -1,0 +1,123 @@
+<section>
+  <p-confirmPopup></p-confirmPopup>
+  <p-dataView
+    #dv
+    [value]="movies"
+    filterBy="name"
+    [paginator]="true"
+    [rows]="3"
+    [sortField]="sortField"
+    [sortOrder]="sortOrder"
+  >
+    <ng-template pTemplate="header">
+      <div class="header-wrap">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Add Movie"
+          icon="pi pi-plus"
+          class="button p-button-rounded p-button-outlined"
+          (click)="onAddToggle()"
+        ></button>
+        <p-dropdown
+          class="dropdown"
+          [options]="sortOptions"
+          optionLabel="label"
+          placeholder="Sort By Name"
+          [(ngModel)]="sortKey"
+          (onChange)="onSortChange($event)"
+        ></p-dropdown>
+        <span class="search p-input-icon-left p-mb-2 p-mb-md-0">
+          <i class="pi pi-search"></i>
+          <input
+            type="search"
+            pInputText
+            placeholder="Search by Name"
+            (input)="dv.filter($any($event.target).value)"
+          />
+        </span>
+        <p-dataViewLayoutOptions class="options"></p-dataViewLayoutOptions>
+      </div>
+    </ng-template>
+    <ng-template let-movie pTemplate="listItem">
+      <div class="movie-list-item">
+        <div class="movie-list-detail">
+          <img [src]="movie.poster" />
+          <div class="movie-list-infos">
+            <div class="name">{{ movie.name }}</div>
+            <div class="description">{{ movie.shortDescription }}</div>
+            <p-rating
+              [ngModel]="movie.rating"
+              [readonly]="true"
+              [cancel]="false"
+            ></p-rating>
+            <div class="category">
+              <i class="pi pi-tag movie-category-icon"></i
+              ><span class="category-genre">{{ movie.genre }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <button
+            pButton
+            pRipple
+            type="button"
+            label="View Item"
+            class="button p-button-outlined p-button-rounded"
+            (click)="onViewItem(movie.id)"
+          ></button>
+          <button
+            pButton
+            pRipple
+            type="button"
+            label="Delete Item"
+            class="p-button-outlined p-button-rounded p-button-danger"
+            (click)="confirmDelete($event, movie.id)"
+          ></button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template let-movie pTemplate="gridItem">
+        <div class="movie-grid-item card">
+          <div class="movie-image">
+            <img [src]="movie.poster" />
+          </div>
+          <div class="movie-grid-item-content">
+            <div class="name">{{ movie.name }}</div>
+            <div class="rating">
+              <p-rating
+                [ngModel]="movie.rating"
+                [readonly]="true"
+                [cancel]="false"
+              ></p-rating>
+            </div>
+
+            <div class="category">
+              <i class="pi pi-tag icon"></i
+              ><span class="category-genre">{{ movie.genre }}</span>
+            </div>
+            <div class="description">{{ movie.shortDescription }}</div>
+            <div class="actions">
+              <button
+                pButton
+                pRipple
+                type="button"
+                label="View Item"
+                class="button p-button-outlined p-button-rounded"
+                (click)="onViewItem(movie.id)"
+              ></button>
+              <button
+                pButton
+                pRipple
+                type="button"
+                label="Delete Item"
+                class="p-button-outlined p-button-rounded p-button-danger"
+                (click)="confirmDelete($event, movie.id)"
+              ></button>
+            </div>
+          </div>
+        </div>
+    </ng-template>
+  </p-dataView>
+</section>
