@@ -1,11 +1,21 @@
 # Movie Decode
 
 ## Overview
-This repository contains the Angular implementation of the movie review application. In this application, the user can view the movies in both list view and card view. Users can also add new movies, delete movie items, edit movie descriptions, and review movies by commenting and giving stars. Movie lists can be sorted by names (ascending or descending order). Movies can also be found by searching.
+This repository contains the Angular implementation of a movie review app called `Movie Decoder`. This app uses `Bootstrap` and `PrimeNG` for creating responsive UI and other functionalities. The app features include -
+
+- Movie list view (Table & Card)
+- Movie item view
+- CRUD operation on Movie items
+- Review list view
+- Add review for specific movies
+- Form validations
+- UI Notifications on CRUD operation
 
 
 ## Live Demo
-The webpage has been deployed to github pages. Live demo can be accessed through the following link :point_down:
+The webpage has been deployed to netlify. Live demo can be accessed through the following link 👇 🔥:
+
+[https://movie-decode.netlify.app/](https://movie-decode.netlify.app/)
 
 
 ## Demo 
@@ -14,6 +24,8 @@ The webpage has been deployed to github pages. Live demo can be accessed through
 ## Run Locally
 To run the project locally follow the steps :point_down:
 - Clone the repository.
+- Install Node.js
+- Install Angular CLI `npm install -g @angular/cli`
 - Run `npm install`
 - Run `ng serve -o`
 - The app should be running at [http://localhost:4200/](http://localhost:4200/).
